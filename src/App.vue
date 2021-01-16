@@ -5,6 +5,7 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col-md-6 mx-auto">
+        <h1>{{ message }}</h1>
         <AddCourse />
       </div>
     </div>
@@ -38,4 +39,7 @@ export default {
 </script>
 
 <style>
+.container{
+  margin-top: 60px;
+}
 </style>

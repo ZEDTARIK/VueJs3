@@ -1,5 +1,13 @@
 <template lang="">
     
+    <div class="row">
+        <div class="col-md-12">
+            <h1>
+                List of Courses
+            </h1>
+        </div>
+    </div>
+
    <div class="row">
     <div class="col-md-4"  v-for="course in Courses" :key="course.id">
         <div class="card my-3">
@@ -41,6 +49,8 @@ export default {
     }
 }
 </script>
-<style lang="">
-    
+<style scoped>
+    h1 {
+        color: brown;
+    }
 </style>
