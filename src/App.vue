@@ -1,12 +1,12 @@
 <template>
-
 <Header />
-
   <div class="container">
-    <div class="row mt-5">
+    <div class="row">
       <div class="col-md-6 mx-auto">
         <h1>{{ message }}</h1>
-        <AddCourse />
+        <AddCourse>
+          <label> add New Cours <i>using Slot Injection</i></label>
+        </AddCourse>
       </div>
     </div>
     <Courses />

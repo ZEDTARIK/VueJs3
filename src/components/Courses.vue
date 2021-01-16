@@ -11,8 +11,11 @@
    <div class="row">
     <div class="col-md-4"  v-for="course in Courses" :key="course.id">
         
-        <DisplayCours :id="course.id" :title="course.title" :image="course.image" 
-                     @emitDeleteCourse="deleteOneCourse($event)" />
+        <DisplayCours 
+                :id="course.id" 
+                :title="course.title" 
+                :image="course.image" 
+                @emitDeleteCourse="deleteOneCourse($event)" />
         
     </div>
    </div>
