@@ -10,20 +10,24 @@
       </div>
     </div>
     <Courses />
+    <Footer title="Pass Data From Parent to Child Using Props" author="Zouhair ETTARAK" />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import AddCourse from "./components/AddCourse.vue";
-import Courses from "./components/Courses.vue"
+import Header from "./components/Header";
+import AddCourse from "./components/AddCourse";
+import Courses from "./components/Courses"
+import Footer from "./components/Footer"
+
 
 export default {
   name: "App",
   components: {
     Header,
     AddCourse,
-    Courses
+    Courses,
+    Footer
   },
   data() {
     return {

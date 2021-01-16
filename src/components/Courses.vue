@@ -10,22 +10,22 @@
 
    <div class="row">
     <div class="col-md-4"  v-for="course in Courses" :key="course.id">
-        <div class="card my-3">
-            <img class="card-img-top" :src="course.image" :alt="course.title">
-            <div class="card-body">
-                <h4 class="card-title"> {{ course.title}} </h4>
-                <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur.
-                </p>
-            </div>
-        </div>
+        
+        <DisplayCours :title="course.title" :image="course.image" />
+        
     </div>
    </div>
 
 </template>
 <script>
+
+import DisplayCours from './DisplayCours'
+
 export default {
-    
+
+    components: {
+        DisplayCours
+    },
     data() {
         return {
             Courses : [
