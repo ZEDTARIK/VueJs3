@@ -1,15 +1,25 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    {{ message }}    
+
+  <input type="text" ref="book">
+  <button @click="handlClick()">Click</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'App',  
+  data() {
+    return {
+      message : 'Formation VueJs 3'
+    }
+  },
+  methods: {
+    handlClick() {
+      this.$refs.book.classList.add('active');
+    }
   }
 }
 </script>
