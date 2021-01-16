@@ -1,36 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
 
-    {{ message }}    
+<Header />
 
-  <input type="text" ref="book">
-  <button @click="handlClick()">Click</button>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 mx-auto">
+        <AddCourse />
+      </div>
+    </div>
+    <Courses />
+  </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
+import AddCourse from "./components/AddCourse.vue";
+import Courses from "./components/Courses.vue"
 
 export default {
-  name: 'App',  
+  name: "App",
+  components: {
+    Header,
+    AddCourse,
+    Courses
+  },
   data() {
     return {
-      message : 'Formation VueJs 3'
-    }
+      message: "Formation VueJs 3",
+    };
   },
   methods: {
     handlClick() {
-      this.$refs.book.classList.add('active');
-    }
-  }
-}
+      this.$refs.book.classList.add("active");
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
