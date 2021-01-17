@@ -6,14 +6,14 @@
         <h1>{{ message }}</h1>
       </div>
     </div>
-    <Courses />
+    <Employees />
     <Footer title="Pass Data From Parent to Child Using Props" author="Zouhair ETTARAK" />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Courses from "./components/Courses"
+import Employees from "./components/employee/Employees"
 import Footer from "./components/Footer"
 
 
@@ -21,7 +21,7 @@ export default {
   name: "App",
   components: {
     Header,
-    Courses,
+    Employees,
     Footer
   },
   data() {
