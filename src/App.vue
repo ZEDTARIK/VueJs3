@@ -4,9 +4,6 @@
     <div class="row">
       <div class="col-md-6 mx-auto">
         <h1>{{ message }}</h1>
-        <AddCourse>
-          <label> add New Cours <i>using Slot Injection</i></label>
-        </AddCourse>
       </div>
     </div>
     <Courses />
@@ -16,7 +13,6 @@
 
 <script>
 import Header from "./components/Header";
-import AddCourse from "./components/AddCourse";
 import Courses from "./components/Courses"
 import Footer from "./components/Footer"
 
@@ -25,7 +21,6 @@ export default {
   name: "App",
   components: {
     Header,
-    AddCourse,
     Courses,
     Footer
   },
