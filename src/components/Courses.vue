@@ -40,10 +40,7 @@
 
   <div class="row">
     <div class="col-md-4" v-for="course in Courses" :key="course.id">
-
-      <DisplayCours :id="course.id" :title="course.title" :image="course.image"
-        @emitDeleteCourse="deleteOneCourse($event)" />
-
+      <DisplayCours :course="course" @emitDeleteCourse="deleteOneCourse($event)" />
     </div>
   </div>
 
@@ -66,18 +63,24 @@
           {
             id: 1,
             title: "Learn Angular",
+            category:'BackEnd',
+            tags: ['Freamwork', 'Front End'],
             image:
               "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/nrOHB2iQTIiGe7hHX9O0",
           },
           {
             id: 2,
             title: "Learn NodeJs",
+            category:'2',
+            tags: ['Freamwork'],
             image:
               "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/yMO0mZjvTm2pwyeOQUpT",
           },
           {
             id: 3,
             title: "Learn ReactJs",
+            category:'2',
+            tags: ['Library'],
             image:
               "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/C2oT8I1eTXGg69ytJ69f",
           },
