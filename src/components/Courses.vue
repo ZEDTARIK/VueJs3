@@ -1,5 +1,22 @@
 <template lang="">
 
+  <teleport to='#alert'>
+    <div class="row">
+      <div class="col-md-6 mx-auto" v-if="alertDeleted">
+        <div class="alert alert-danger">
+          <strong>Deleted SuccessFully !!</strong>
+        </div>
+      </div>
+
+      <div class="col-md-6 mx-auto" v-if="alertAdd">
+        <div class="alert alert-success">
+          <strong>Add New Course SuccessFully !!</strong>
+        </div>
+      </div>
+
+    </div>
+  </teleport>
+
   <div class="row" v-if="showForm">
     <div class="col-md-6 mx-auto">
       <AddCourse @add="addCourse($event)">
@@ -43,6 +60,8 @@
     data() {
       return {
         showForm: false,
+        alertDeleted : false,
+        alertAdd: false,
         Courses: [
           {
             id: 1,
@@ -68,10 +87,18 @@
     methods: {
       deleteOneCourse(id) {
         this.Courses = this.Courses.filter((course) => course.id != id);
+        this.alertDeleted = true;
+        setTimeout(() => {
+          this.alertDeleted = false
+        }, 3000)
       },
       addCourse(course) {
         this.Courses = [course, ...this.Courses],
           this.showForm = false;
+          this.alertAdd = true;
+          setTimeout(()=> {
+            this.alertAdd = false
+          }, 3000)
       },
       displayForm() {
         this.showForm = !this.showForm
