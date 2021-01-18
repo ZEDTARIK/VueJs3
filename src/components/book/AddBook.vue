@@ -61,7 +61,7 @@ export default {
     onSubmit() {
       const book = {
         id: Math.floor(Math.random(5) * 94),
-        autor: this.author,
+        author: this.author,
         title: this.title,
         image: this.image,
       };

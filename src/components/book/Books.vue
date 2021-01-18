@@ -69,7 +69,7 @@ export default {
             "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/aL2OXWSpTguVo0azLaPb",
         },
         {
-          id: 2,
+          id: 3,
           author: "FORWORK",
           title: "JAVA SCRIPT",
           image:
