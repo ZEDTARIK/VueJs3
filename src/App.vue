@@ -1,8 +1,13 @@
 <template>
-<Header />
+
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mx-auto">
+      <div class="col-md-12">
+        <Header />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center">
         <h1>{{ message }}</h1>
       </div>
     </div>
